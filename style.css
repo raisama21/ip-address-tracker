@@ -1,0 +1,174 @@
+/* CSS custom varibales */
+:root {
+  --gray1: 0, 0%, 59%;
+  --gray2: 0, 0%, 17%;
+
+  --fs-inputText: 1.125rem;
+}
+
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-bottom: 3.625rem;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  padding-block: 2rem;
+}
+
+h2 {
+  font-weight: 500;
+  color: hsl(var(--gray1));
+  font-size: 0.75rem;
+}
+
+p,
+span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: hsl(var(--gray2));
+}
+
+.search-bar {
+  background-image: url("/images/pattern-bg.png");
+}
+
+.search-bar form {
+  max-width: 34.75rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding-bottom: 12rem;
+}
+
+.search-bar form input {
+  width: 100%;
+  border: none;
+  padding-block: 1rem;
+  padding-left: 1.5rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  color: hsl(var(--gray1));
+  font-weight: 400;
+}
+
+.search-bar form button {
+  border: none;
+  padding: 1.25rem 1.5rem;
+  background-color: hsl(var(--gray2));
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  transition: 250ms ease-in-out;
+}
+
+.search-bar form button:hover {
+  background-color: hsl(var(--gray2), 0.8);
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 69.375rem;
+  margin-inline: auto;
+  padding-block: 1.75rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.875rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper div:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.wrapper div h2 {
+  margin-bottom: 0.75rem;
+}
+
+hr {
+  display: none;
+}
+
+#map {
+  height: 500px;
+  z-index: -1;
+}
+
+@media (min-width: 64rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 0.875rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding-bottom: 0;
+  }
+
+  .search-bar form {
+    padding-bottom: 6.625rem;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wrapper div h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .wrapper div:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  hr {
+    display: block;
+    color: hsl(var(--gray1), 0.4);
+  }
+} ;
